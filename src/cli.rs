@@ -1,4 +1,4 @@
-use crate::commands::{cat_file, hash_object, init};
+use crate::commands::{cat_file, hash_object, init, ls_tree, write_tree};
 use clap::{Parser, Subcommand};
 
 #[derive(Parser, Debug)]
@@ -17,4 +17,8 @@ pub enum Commands {
     CatFile(cat_file::Arguments),
     /// Compute object ID and optionally create an object from a file
     HashObject(hash_object::Arguments),
+    /// List the contents of a tree object
+    LsTree(ls_tree::Arguments),
+    /// Create a tree object from the current index
+    WriteTree(write_tree::Arguments),
 }

@@ -6,7 +6,6 @@ use std::fs;
 use clap::Parser;
 use cli::Args;
 use cli::Commands;
-use commands::init;
 
 mod cli;
 mod commands;
@@ -20,5 +19,7 @@ fn main() {
         Commands::Init(arguments) => arguments.handle(),
         Commands::CatFile(arguments) => arguments.handle(),
         Commands::HashObject(arguments) => arguments.handle(),
+        Commands::LsTree(arguments) => arguments.handle(),
+        Commands::WriteTree(arguments) => arguments.handle(),
     }
 }

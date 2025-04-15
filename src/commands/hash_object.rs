@@ -1,10 +1,7 @@
 use clap::Parser;
 use flate2::{write::ZlibEncoder, Compression};
 use sha1::{Digest, Sha1};
-use std::{
-    fs,
-    io::{BufReader, Read, Write},
-};
+use std::{fs, io::Write};
 
 #[derive(Parser, Debug)]
 pub struct Arguments {
