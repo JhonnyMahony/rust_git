@@ -21,5 +21,6 @@ fn main() {
         Commands::HashObject(arguments) => arguments.handle(),
         Commands::LsTree(arguments) => arguments.handle(),
         Commands::WriteTree(arguments) => arguments.handle(),
+        Commands::CommitTree(arguments) => arguments.handle(),
     }
 }

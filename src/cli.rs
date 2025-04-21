@@ -1,4 +1,4 @@
-use crate::commands::{cat_file, hash_object, init, ls_tree, write_tree};
+use crate::commands::{cat_file, commit_tree, hash_object, init, ls_tree, write_tree};
 use clap::{Parser, Subcommand};
 
 #[derive(Parser, Debug)]
@@ -21,4 +21,6 @@ pub enum Commands {
     LsTree(ls_tree::Arguments),
     /// Create a tree object from the current index
     WriteTree(write_tree::Arguments),
+    ///
+    CommitTree(commit_tree::Arguments),
 }
